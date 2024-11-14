@@ -11,15 +11,15 @@ function addValue(){
     var a = document.getElementById('input_a').value.trim();
     var b = document.getElementById('input_b').value.trim();
 
-    // check if inputs are empty
-    if (a === '' || b === ''){
-        document.mycalculator.output.value = 'Please enter both numbers';
-        return null;
-    }
-
     // parse to integer. You can use: parseInt(input, 10);
     var a_num = parseInt(a, 10);
     var b_num = parseInt(b, 10);
+
+    // check if inputs are valid
+    if (isNaN(a_num) || isNaN(b_num)) {
+        document.mycalculator.output.value = 'Please enter valid numbers';
+        return null;
+    }
 
     // perform operation
     var result = a_num + b_num;
@@ -39,15 +39,15 @@ function mulValue(){
     var a = document.getElementById('input_a').value.trim();
     var b = document.getElementById('input_b').value.trim();
 
-    // check if inputs are empty
-    if (a === '' || b === ''){
-    document.mycalculator.output.value = 'Please enter both numbers';
-    return null;
-    }
-
     // parse to integer. You can use: parseInt(input, 10);
     var a_num = parseInt(a, 10);
     var b_num = parseInt(b, 10);
+
+    // check if inputs are valid
+    if (isNaN(a_num) || isNaN(b_num)) {
+        document.mycalculator.output.value = 'Please enter valid numbers';
+        return null;
+    }
 
     // perform operation
     var result = a_num * b_num;
@@ -66,15 +66,15 @@ function divValue(){
     var a = document.getElementById('input_a').value.trim();
     var b = document.getElementById('input_b').value.trim();
 
-    // check if inputs are empty
-    if (a === '' || b === ''){
-    document.mycalculator.output.value = 'Please enter both numbers';
-    return null;
-    }
-    
     // parse to integer. You can use: parseInt(input, 10);
     var a_num = parseInt(a, 10);
     var b_num = parseInt(b, 10);
+
+    // check if inputs are valid
+    if (isNaN(a_num) || isNaN(b_num)) {
+        document.mycalculator.output.value = 'Please enter valid numbers';
+        return null;
+    }
 
     // perform operation
     var result = a_num / b_num;
